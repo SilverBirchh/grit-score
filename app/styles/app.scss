@@ -57,6 +57,15 @@ body {
 		border-radius: 6px;
 		border: 0;
 		font-weight: bold;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: transparent;
+			color: #fefefe;
+			border-bottom-color: rgba(255, 255, 255, 0.5);
+			box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+		}
 	}
 
 	&_title {
@@ -69,7 +78,6 @@ body {
 		li {
 			a {
 				color: #b0b0b0;
-
 				&:hover {
 					text-decoration: underline;
 				}

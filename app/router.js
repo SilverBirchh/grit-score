@@ -9,6 +9,7 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('learn');
   this.route('purpose');
+  this.authenticatedRoute('question');
 });
 
 export default Router;
