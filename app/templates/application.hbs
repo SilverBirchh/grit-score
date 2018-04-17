@@ -1,1 +1,34 @@
-{{outlet}}
+<div class="grid-container full">
+  <div class="grid-y small-grid-frame">
+  <div class="top-bar">
+  	<div class="top-bar-left">
+  		<ul class="dropdown menu" data-dropdown-menu>
+  			<li class="menu-text">
+          {{#link-to "index"}}
+            Grit Score
+          {{/link-to}}
+        </li>
+  		</ul>
+  	</div>
+  	<div class="top-bar-right">
+  		<ul class="menu">
+  			<li>
+          {{link-to "Learn" "learn"}}
+  			</li>
+  			<li>
+          {{link-to "Purpose" "purpose"}}
+        </li>
+  		</ul>
+  	</div>
+  </div>
+  {{outlet}}
+  </div>
+<footer class="footer">
+  <span>Made by Bradley Birch</span>
+  <span>Check out the
+    <a href="https://github.com/SilverBirchh/grit-score" target=_blank
+    rel=noopener>source
+    </a>
+  </span>
+</footer>
+</div>
