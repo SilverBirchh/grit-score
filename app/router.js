@@ -10,6 +10,10 @@ Router.map(function() {
   this.route('learn');
   this.route('purpose');
   this.authenticatedRoute('question');
+
+  this.route('question', function() {
+    this.route('1');
+  });
 });
 
 export default Router;

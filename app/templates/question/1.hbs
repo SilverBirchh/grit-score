@@ -1,0 +1,9 @@
+<section class="box">
+  <div class="box_context">
+    <h1 class="box_title">Q1. Gender</h1>
+    {{#paper-radio-group groupValue=(readonly model.gender) onChange=(pipe-action (action (mut model.gender)) (route-action 'saveGender')) as |group|}}
+      {{#group.radio value="male"}} Male {{/group.radio}}
+      {{#group.radio value="female"}} Female {{/group.radio}}
+    {{/paper-radio-group}}
+  </div>
+</section>

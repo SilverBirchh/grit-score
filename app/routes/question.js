@@ -13,19 +13,22 @@ export default Route.extend({
 			.catch(() => {
 				return this.get('store')
 					.createRecord('user', {
-						newIdeasDistractMe: 0,
-						setBacksDontDiscourage: 0,
-						changingGoals: 0,
-						hardWorker: 0,
-						difficultMaintainingFocus: 0,
-						finishWhatIStart: 0,
-						interestsChange: 0,
-						diligent: 0,
-						obsessedButGaveUp: 0,
-						overcomeSetBacks: 0,
-						gritScore: 0,
-						hoursWorkedWeek: 0,
-						storyPointsCompletedPerSprint: 0,
+            id: uid,
+            gender: 'male',
+            age: -1,
+						newIdeasDistractMe: -1,
+						setBacksDontDiscourage: -1,
+						changingGoals: -1,
+						hardWorker: -1,
+						difficultMaintainingFocus: -1,
+						finishWhatIStart: -1,
+						interestsChange: -1,
+						diligent: -1,
+						obsessedButGaveUp: -1,
+						overcomeSetBacks: -1,
+						gritScore: -1,
+						hoursWorkedWeek: -1,
+						storyPointsCompletedPerSprint: -1,
 					})
 					.save();
 			});
