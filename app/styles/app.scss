@@ -20,6 +20,11 @@ body {
 	background: #3985cf;
 }
 
+md-input-container.md-default-theme .md-input,
+md-input-container .md-input {
+	margin: 0;
+}
+
 .box {
 	flex: 1;
 	margin: auto;
@@ -40,13 +45,13 @@ body {
 
 		@media only screen and (max-width: 768px) {
 			width: 90%;
-			height: 90%;
+			margin-top: 2em;
 		}
 	}
 
 	&_button-container {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 	}
 
 	&_button--main {

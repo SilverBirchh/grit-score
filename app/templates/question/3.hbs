@@ -1,0 +1,15 @@
+<section class="box">
+  <div class="box_context">
+    <h1 class="box_title">Q3. Ideas and Projects</h1>
+    <h4>New ideas and projects sometimes distract me from previous ones?</h4>
+    <div>Rating 1 - 5. Where 5 is highly like me and 1 is nothign like me.</div>
+    <div class="layout layout-align-center-center slider-container">
+        <span>1</span>{{paper-slider class="flex" primary=true discrete=true value=model.newIdeasDistractMe step=1 min=1 max=5 onChange=(pipe-action (action (mut model.newIdeasDistractMe)) (route-action 'save' 'newIdeasDistractMe'))}}<span>5</span>
+    </div>
+
+    <div class="box_button-container">
+      <button {{action (route-action "previous")}} class="button box_button--main">Previous</button>
+      <button {{action (route-action "next")}} class="button box_button--main">Next</button>
+    </div>
+  </div>
+</section>

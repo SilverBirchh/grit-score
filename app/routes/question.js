@@ -1,5 +1,6 @@
 import Route from '@ember/routing/route';
-import { inject as service } from "@ember/service";
+import { inject as service } from '@ember/service';
+import { get } from '@ember/object';
 
 export default Route.extend({
 	session: service(),
@@ -13,9 +14,9 @@ export default Route.extend({
 			.catch(() => {
 				return this.get('store')
 					.createRecord('user', {
-            id: uid,
-            gender: 'male',
-            age: -1,
+						id: uid,
+						gender: 'male',
+						age: -1,
 						newIdeasDistractMe: -1,
 						setBacksDontDiscourage: -1,
 						changingGoals: -1,
@@ -32,5 +33,37 @@ export default Route.extend({
 					})
 					.save();
 			});
+	},
+
+	actions: {
+		save(prop) {
+			const id = this.get('session.currentUser.uid');
+			const propValue = get(this.modelFor('question'), prop);
+
+			this.get('store')
+				.findRecord('user', id)
+				.then(function(user) {
+					user.set(prop, propValue);
+					user.save();
+				});
+		},
+
+		next() {
+			let route = Number(
+				this.router.currentRouteName.substring(
+					this.router.currentRouteName.length - 1
+				)
+			);
+			this.transitionTo(`question.${++route}`);
+		},
+
+		previous() {
+			let route = Number(
+				this.router.currentRouteName.substring(
+					this.router.currentRouteName.length - 1
+				)
+			);
+			this.transitionTo(`question.${--route}`);
+		},
 	},
 });

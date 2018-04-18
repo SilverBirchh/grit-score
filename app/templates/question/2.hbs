@@ -1,0 +1,14 @@
+<section class="box">
+  <div class="box_context">
+    <h1 class="box_title">Q2. Age</h1>
+    <h4>What is your age?</h4>
+    <div class="layout layout-align-center-center slider-container">
+      <span>Age:</span> {{paper-slider class="flex md-accent" min=1 max=100 value=model.age onChange=(pipe-action (action (mut model.age)) (route-action 'save' 'age'))}} {{paper-input class="input" type="number" value=model.age  onChange=(pipe-action (action (mut model.age)) (route-action 'save' 'age'))}}
+    </div>
+
+    <div class="box_button-container">
+      <button {{action (route-action "previous")}} class="button box_button--main">Previous</button>
+      <button {{action (route-action "next")}} class="button box_button--main">Next</button>
+    </div>
+  </div>
+</section>
