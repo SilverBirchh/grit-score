@@ -1,1 +1,15 @@
-{{outlet}}
+<section class="box">
+  <div class="box_context">
+    <h1 class="box_title">Q4. Setbacks</h1>
+    <h4>Setbacks don't discourage me. I don't give up easily.</h4>
+    <div>Rating 1 - 5. <strong>Where 5 is highly like me and 1 is nothing like me.</strong></div>
+    <div class="layout layout-align-center-center slider-container">
+      <span>1</span>{{paper-slider class="flex" primary=true discrete=true value=model.setBacksDontDiscourage step=1 min=1 max=5 onChange=(pipe-action (action (mut model.setBacksDontDiscourage)) (route-action 'save' 'setBacksDontDiscourage'))}}<span>5</span>
+    </div>
+
+    <div class="box_button-container">
+      <button {{action (route-action "previous")}} class="button box_button--main">Previous</button>
+      <button {{action (route-action "next")}} class="button box_button--main">Next</button>
+    </div>
+  </div>
+</section>
