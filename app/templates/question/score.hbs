@@ -2,14 +2,16 @@
   <div class="box_context">
     <h1 class="box_title">Results</h1>
     <h4>Your grit score is...</h4>
-    <h2>{{model.gritScore}}</h2>
-    <div class="pie-wrapper progress-95 style-2">
-      <span class="label">95<span class="smaller">%</span></span>
-      <div class="pie">
-        <div class="left-side half-circle"></div>
-        <div class="right-side half-circle"></div>
+    <div class="set-size charts-container">
+      <div class="pie-wrapper progress-95 style-2">
+        <span class="label">{{model.gritScore}}</span>
+        <div class="pie" style={{rotate.clip}}>
+          <div class="left-side half-circle" style={{rotate.left}}></div>
+          <div class="right-side half-circle" style={{rotate.right}}></div>
+        </div>
+        <div class="shadow"></div>
       </div>
-      <div class="shadow"></div>
     </div>
   </div>
 </section>
+{{log rotate}}
