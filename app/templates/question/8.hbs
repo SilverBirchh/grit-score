@@ -2,10 +2,13 @@
   <div class="box_context">
     <h1 class="box_title">Q8. Completing</h1>
     <h4>I finish whatever I begin.</h4>
-    <div>Rating 1 - 5. <strong>Where 5 is highly like me and 1 is nothing like me.</strong></div>
-    <div class="layout layout-align-center-center slider-container">
-      <span>1</span>{{paper-slider class="flex" primary=true discrete=true value=model.finishWhatIStart step=1 min=1 max=5 onChange=(pipe-action (action (mut model.finishWhatIStart)) (route-action 'save' 'finishWhatIStart'))}}<span>5</span>
-    </div>
+    {{#paper-radio-group groupValue=(readonly model.finishWhatIStart) onChange=(pipe-action (action (mut model.finishWhatIStart)) (route-action 'save' 'finishWhatIStart')) as |group|}}
+      {{#group.radio value=5}} Very much like me {{/group.radio}}
+      {{#group.radio value=4}} Mostly like me {{/group.radio}}
+      {{#group.radio value=3}} Somewhat like me {{/group.radio}}
+      {{#group.radio value=2}} Not much like me {{/group.radio}}
+      {{#group.radio value=1}} Not like me at all {{/group.radio}}
+    {{/paper-radio-group}}
 
     <div class="box_button-container">
       <button {{action (route-action "previous")}} class="button box_button--main">Previous</button>
