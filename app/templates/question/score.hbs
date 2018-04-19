@@ -6,12 +6,15 @@
       <div class="pie-wrapper progress-95 style-2">
         <span class="label">{{model.gritScore}}</span>
         <div class="pie" style={{rotate.clip}}>
-          <div class="left-side half-circle" style={{rotate.left}}></div>
-          <div class="right-side half-circle" style={{rotate.right}}></div>
+          <div class="left-side half-circle {{color}}" style={{rotate.left}}></div>
+          <div class="right-side half-circle {{color}}" style={{rotate.right}}></div>
         </div>
         <div class="shadow"></div>
       </div>
     </div>
+    <h4 style='text-align:right;'>...out of five!</h4>
+    <p style='text-align:center;'>
+      A score of 4.1 makes you grittier than 70% of Americans!
+    </p>
   </div>
 </section>
-{{log rotate}}
