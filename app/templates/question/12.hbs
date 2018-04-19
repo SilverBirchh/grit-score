@@ -12,6 +12,7 @@
 
     <div class="box_button-container">
       <button {{action (route-action "previous")}} class="button box_button--main">Previous</button>
+      {{#link-to 'question.score' class="button box_button--main" tag="button"}}Finish{{/link-to}}
     </div>
   </div>
 </section>

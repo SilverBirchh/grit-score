@@ -1,10 +1,6 @@
 import Route from '@ember/routing/route';
-import {
-  inject as service
-} from '@ember/service';
-import {
-  get
-} from '@ember/object';
+import { inject as service } from '@ember/service';
+import { get } from '@ember/object';
 
 export default Route.extend({
   session: service(),
@@ -21,19 +17,19 @@ export default Route.extend({
             id: uid,
             gender: 'male',
             age: 1,
-            newIdeasDistractMe: 1,
-            setBacksDontDiscourage: 1,
-            changingGoals: 1,
-            hardWorker: 1,
-            difficultMaintainingFocus: 1,
-            finishWhatIStart: 1,
-            interestsChange: 1,
-            diligent: 1,
-            obsessedButGaveUp: 1,
-            overcomeSetBacks: 1,
+            newIdeasDistractMe: 3,
+            setBacksDontDiscourage: 3,
+            changingGoals: 3,
+            hardWorker: 3,
+            difficultMaintainingFocus: 3,
+            finishWhatIStart: 3,
+            interestsChange: 3,
+            diligent: 3,
+            obsessedButGaveUp: 3,
+            overcomeSetBacks: 3,
             gritScore: 1,
             hoursWorkedWeek: 1,
-            storyPointsCompletedPerSprint: 1,
+            storyPointsCompletedPerSprint: 1
           })
           .save();
       });
@@ -53,15 +49,21 @@ export default Route.extend({
     },
 
     next() {
-      let route = Number(this.router.currentRouteName.substring(this.router.currentRouteName.indexOf('.') +
-        1));
+      let route = Number(
+        this.router.currentRouteName.substring(
+          this.router.currentRouteName.indexOf('.') + 1
+        )
+      );
       this.transitionTo(`question.${++route}`);
     },
 
     previous() {
-      let route = Number(this.router.currentRouteName.substring(this.router.currentRouteName.indexOf('.') +
-        1));
+      let route = Number(
+        this.router.currentRouteName.substring(
+          this.router.currentRouteName.indexOf('.') + 1
+        )
+      );
       this.transitionTo(`question.${--route}`);
-    },
-  },
+    }
+  }
 });

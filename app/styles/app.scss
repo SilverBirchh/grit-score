@@ -1,6 +1,7 @@
 @import 'ember-paper';
 @import 'settings';
 @import 'foundation-sites/foundation';
+@import '_score';
 @include foundation-everything;
 
 body,
