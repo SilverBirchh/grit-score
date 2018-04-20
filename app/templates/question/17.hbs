@@ -1,10 +1,15 @@
 <section class="box">
   <div class="box_context">
-    <h1 class="box_title">Q13. Work Hours</h1>
-    <h4>How many hours do you work in an average week? This includes any work / courses outside of regular employment.</h4>
-    <div class="layout layout-align-center-center slider-container">
-      <span>Hours:</span> {{paper-slider class="flex md-accent" min=1 max=100 value=model.age onChange=(pipe-action (action (mut model.age)) (route-action 'save' 'age'))}} {{paper-input class="input" type="number" value=model.age  onChange=(pipe-action (action (mut model.age)) (route-action 'save' 'age'))}}
-    </div>
+    <h1 class="box_title">Q14. Pride</h1>
+    <h4>Do you take pride in your work?</h4>
+
+    {{#paper-radio-group groupValue=(readonly model.prideInWork) onChange=(pipe-action (action (mut model.prideInWork)) (route-action 'save' 'prideInWork')) as |group|}}
+      {{#group.radio value=5}} Very much like me {{/group.radio}}
+      {{#group.radio value=4}} Mostly like me {{/group.radio}}
+      {{#group.radio value=3}} Somewhat like me {{/group.radio}}
+      {{#group.radio value=2}} Not much like me {{/group.radio}}
+      {{#group.radio value=1}} Not like me at all {{/group.radio}}
+    {{/paper-radio-group}}
 
     <div class="box_button-container">
       <button {{action (route-action "previous")}} class="button box_button--main">Previous</button>

@@ -29,7 +29,11 @@ export default Route.extend({
             overcomeSetBacks: 3,
             gritScore: 1,
             hoursWorkedWeek: 1,
-            storyPointsCompletedPerSprint: 1
+            extraCourses: false,
+            workExtraHours: 3,
+            motivatedForWork: 3,
+            prideInWork: 3,
+            callOffSick: 3,
           })
           .save();
       });

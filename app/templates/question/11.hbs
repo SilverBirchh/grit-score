@@ -1,7 +1,7 @@
 <section class="box">
   <div class="box_context">
     <h1 class="box_title">11. Obbsessed</h1>
-    <h4>I have been Obbsessedwith a certain idea or project for a short time but later lost interest.</h4>
+    <h4>I have been obbsessed with a certain idea or project for a short time but later lost interest.</h4>
     {{#paper-radio-group groupValue=(readonly model.obsessedButGaveUp) onChange=(pipe-action (action (mut model.obsessedButGaveUp)) (route-action 'save' 'obsessedButGaveUp')) as |group|}}
       {{#group.radio value=1}} Very much like me {{/group.radio}}
       {{#group.radio value=2}} Mostly like me {{/group.radio}}

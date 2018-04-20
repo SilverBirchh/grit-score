@@ -1,7 +1,7 @@
 <section class="box">
   <div class="box_context">
     <h1 class="box_title">Q7. Focus</h1>
-    <h4>I have difficulty maintaining mu focus on projects that take more than a few months to complete.</h4>
+    <h4>I have difficulty maintaining my focus on projects that take more than a few months to complete.</h4>
     {{#paper-radio-group groupValue=(readonly model.difficultMaintainingFocus) onChange=(pipe-action (action (mut model.difficultMaintainingFocus)) (route-action 'save' 'difficultMaintainingFocus')) as |group|}}
       {{#group.radio value=1}} Very much like me {{/group.radio}}
       {{#group.radio value=2}} Mostly like me {{/group.radio}}

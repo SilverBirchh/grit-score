@@ -1,7 +1,7 @@
 <section class="box">
   <div class="box_context">
-    <h1 class="box_title">Q13. Extra curricular</h1>
-    <h4>Do you do any courses outside of your day job?</h4>
+    <h1 class="box_title">Q14. Extra curricular</h1>
+    <h4>Do you do any courses or work outside of your day job?</h4>
 
     {{#paper-radio-group groupValue=(readonly model.extraCourses) onChange=(pipe-action (action (mut model.extraCourses)) (route-action 'save' 'extraCourses')) as |group|}}
       {{#group.radio value=true}} Yes {{/group.radio}}
