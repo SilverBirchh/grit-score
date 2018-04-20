@@ -15,5 +15,5 @@ export default DS.Model.extend({
   overcomeSetBacks: DS.attr('number'),
   gritScore: DS.attr('number'),
   hoursWorkedWeek: DS.attr('number'),
-  storyPointsCompletedPerSprint: DS.attr('number'),
+  extraCourses: DS.attr('Boolean'),
 });
