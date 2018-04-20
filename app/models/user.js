@@ -17,3 +17,10 @@ export default DS.Model.extend({
   hoursWorkedWeek: DS.attr('number'),
   extraCourses: DS.attr('Boolean'),
 });
+// 
+// Do you do any courses outside of work?
+// How many hours do you work in a given day?
+// How do you react if your boss asks you to stay late and do some extra work?
+// I am motivated for work when I wake up in the morning
+// Do you take pride in your work?
+// Do you ever call off sick when you aren't sick?
