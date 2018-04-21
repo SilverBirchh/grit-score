@@ -32,6 +32,7 @@ Router.map(function() {
     this.route('17');
     this.route('18');
   });
+  this.route('info');
 });
 
 export default Router;
