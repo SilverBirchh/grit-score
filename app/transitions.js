@@ -14,4 +14,11 @@ export default function() {
     this.use('toLeft'),
     this.reverse('toRight')
   );
+
+  this.transition(
+    this.fromRoute(`index`),
+    this.toRoute(`info`),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
 }
